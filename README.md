@@ -1,14 +1,43 @@
 # LeetCode Solutions
 
-This repository contains my solutions to LeetCode problems, organized by problem categories.
+This repository contains my solutions to LeetCode problems using a structured template for better documentation and learning
 
-## How to Use
+## Template Sections
 
-1. Each solution is documented in a markdown file using the template from `template/leetcode_template.md`
-2. Solutions are organized by their problem categories
-3. Each solution includes:
-   - Problem description
-   - Approach explanation
-   - Solution code
-   - Time and Space complexity analysis
-   - Notes
+1. **Problem Info**
+   - Number & Title
+   - Description
+   - Examples
+   - Constraints
+
+2. **Approaches**
+   - Time & Space Complexity
+   - Algorithm Steps
+   - Implementation
+
+3. **Notes**
+   - Key Points
+   - Follow-up Questions
+   - Test Cases
+  
+4. **Solution Code**
+   - Clean Implementation
+   - Edge Case Handling
+   - Comments & Documentation
+
+## Usage
+
+1. Copy `templates/leetcode_template.java`
+2. Create new file: `solutions/[number]_[name].java`
+3. Fill in problem info
+4. Document approaches
+5. Implement solution
+6. Add notes
+
+## Best Practices
+
+- Keep descriptions clear and concise
+- Document all edge cases
+- Include time/space complexity
+- Follow Java conventions
+- Add relevant test cases
