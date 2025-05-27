@@ -54,7 +54,7 @@ import java.util.*;
  * - List with long strings: ["longstring", "anotherlongstring"]
  */
 
-public class Codec {
+class Solution {
     // Approach 1: Two-Part Encoding
     public String encodeTwoPart(List<String> strs) {
         if (strs.isEmpty()) return "";
@@ -146,7 +146,3 @@ public class Codec {
         return res;
     }
 }
-
-// Codec object will be instantiated and called as such:
-// Codec codec = new Codec();
-// codec.decode(codec.encode(strs)); 
