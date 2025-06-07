@@ -53,7 +53,6 @@ import java.util.Arrays;
  * 
  * ====== NOTES ======
  * - The Hash Set solution is the most efficient and readable
- * - The Hash Map solution is more complex but shows an alternative approach
  * - The Brute Force solution is simple but inefficient
  * - The Sorting solution is straightforward but not optimal
  */
