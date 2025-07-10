@@ -122,8 +122,8 @@ public class Solution {
         List<List<Integer>> result = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0) break; // Since array is sorted, no point in continuing
-            if (i > 0 && nums[i] == nums[i - 1]) continue; // Skip duplicates
+            if (nums[i] > 0) break;
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1;
             int right = nums.length - 1;
@@ -140,8 +140,8 @@ public class Solution {
                     left++;
                     right--;
 
-                    while (left < right && nums[left] == nums[left - 1]) left++; // Skip duplicates
-                    while (left < right && nums[right] == nums[right + 1]) right--; // Skip duplicates
+                    while (left < right && nums[left] == nums[left - 1]) left++;
+                    while (left < right && nums[right] == nums[right + 1]) right--;
                 }
             }
         }
