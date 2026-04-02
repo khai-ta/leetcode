@@ -1,7 +1,16 @@
 -- [595] - Big Countries
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: World(name, continent, area, population, gdp)
+-- A country is big if area >= 3000000 or population >= 25000000
+-- Return name, population, and area for all big countries
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Use OR because either condition makes a country big
+-- Select only the required columns in the requested order
+-- Time complexity is O(n) over World rows
+
+SELECT name, population, area
+FROM World
+WHERE area >= 3000000 OR population >= 25000000;
