@@ -1,7 +1,17 @@
 -- [1683] - Invalid Tweets
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Tweets(tweet_id, content)
+-- A tweet is invalid if content length is strictly greater than 15
+-- Return tweet IDs for invalid tweets
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Use LENGTH(content) to count characters in tweet content
+-- Filter rows where length is greater than 15
+-- Select only tweet_id because that is the required output column
+-- Time complexity is O(n) over Tweets rows
+
+SELECT tweet_id
+FROM Tweets
+WHERE LENGTH(content) > 15;
