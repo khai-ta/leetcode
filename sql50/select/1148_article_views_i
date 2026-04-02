@@ -1,7 +1,18 @@
 -- [1148] - Article Views I
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Views(article_id, author_id, viewer_id, view_date)
+-- Find authors who viewed at least one of their own articles
+-- author_id = viewer_id means the author viewed their own article
+-- Return result as column id sorted by id in ascending order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Use author_id = viewer_id to filter self-views
+-- Use DISTINCT because Views may contain duplicate rows
+-- Alias author_id as id and sort ascending as requested
+-- Time complexity is O(n) over Views rows
+
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY id;
