@@ -1,7 +1,18 @@
 -- [584] - Find Customer Referee
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Customer(id, name, referee_id)
+-- Find customer names where either:
+-- 1) referee_id is not 2
+-- 2) referee_id is NULL (not referred by anyone)
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Include NULL referee rows explicitly because comparisons with NULL do not
+-- evaluate to true in SQL
+-- Use OR with IS NULL to keep customers without a referee
+-- Time complexity is O(n) over Customer rows
+
+SELECT name
+FROM Customer
+WHERE referee_id != 2 OR referee_id IS NULL;
