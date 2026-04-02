@@ -1,8 +1,17 @@
 -- [1757] - Recyclable and Low Fat Products
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Products(product_id, low_fats, recyclable)
+-- Find product IDs where the product is both low fat and recyclable
+-- low_fats and recyclable are ENUM values in {'Y', 'N'}
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Use a  filter with AND on both conditions
+-- Select only product_id because that is the required output column
+-- Time complexity is O(n) over Products rows
+
+SELECT product_id
+FROM Products
+WHERE low_fats = 'Y' AND recyclable = 'Y';
 
