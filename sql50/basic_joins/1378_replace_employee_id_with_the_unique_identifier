@@ -1,7 +1,18 @@
 -- [1378] - Replace Employee ID With The Unique Identifier
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Employees(id, name)
+-- Table: EmployeeUNI(id, unique_id)
+-- Show each employee name with their unique_id
+-- If an employee has no matching row in EmployeeUNI, unique_id should be NULL
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Use LEFT JOIN from Employees to EmployeeUNI to keep all employees
+-- Matched rows return unique_id and unmatched rows return NULL
+-- Select only unique_id and name as required
+-- Time complexity is O(n + m) depending on join execution and indexing
+
+SELECT EmployeeUNI.unique_id, Employees.name
+FROM Employees
+LEFT JOIN EmployeeUNI ON Employees.id = EmployeeUNI.id;
