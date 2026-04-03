@@ -1,7 +1,20 @@
 -- [1581] - Customer Who Visited but Did Not Make Any Transactions
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Visits(visit_id, customer_id)
+-- Table: Transactions(transaction_id, visit_id, amount)
+-- Find customers who visited without making any transactions
+-- Return each customer_id with the number of visits that had no transaction
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- LEFT JOIN Visits to Transactions to keep all visits
+-- Filter rows where transaction_id is NULL to find visits without transactions
+-- Group by customer_id and count visit_id for the number of no-transaction visits
+-- Time complexity is O(n + m) depending on join execution and indexing
+
+SELECT v.customer_id, COUNT(v.visit_id) AS count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t ON v.visit_id = t.visit_id
+WHERE t.transaction_id IS NULL
+GROUP BY v.customer_id;
