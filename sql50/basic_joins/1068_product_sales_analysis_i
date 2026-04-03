@@ -1,7 +1,17 @@
 -- [1068] - Product Sales Analysis I
 --
 -- Description:
--- TODO: Add problem description.
+-- Table: Sales(sale_id, product_id, year, quantity, price)
+-- Table: Product(product_id, product_name)
+-- Report product_name, year, and price for each sale in Sales
+-- Return the result in any order
 --
 -- ====== NOTES ======
--- TODO: Add SQL solution skeleton.
+-- Join Sales with Product using product_id to get product_name
+-- Select only product_name, year, and price as required
+-- LEFT JOIN keeps all Sales rows even if a product record is missing
+-- Time complexity is O(n + m) depending on join execution and indexing
+
+SELECT Product.product_name, Sales.year, Sales.price
+FROM Sales
+LEFT JOIN Product ON Sales.product_id = Product.product_id;
